@@ -9,7 +9,7 @@ source:
   sha256: 7f09824fcfe589eb32260c305ff9a126fe3bf93be218d372e8e9c10e212df470
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage('qt6-networkauth', max_pin='x.x') }}
@@ -23,27 +23,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - qt6-main {{ version }}             # [build_platform != target_platform]
-    - {{ cdt('mesa-libgl-devel') }}      # [linux]
-    - {{ cdt('mesa-libegl-devel') }}     # [linux]
-    - {{ cdt('mesa-dri-drivers') }}      # [linux]
-    - {{ cdt('libdrm-devel') }}          # [linux]
-    - {{ cdt('libglvnd-glx') }}          # [linux]
-    - {{ cdt('libglvnd-egl') }}          # [linux]
+
   host:
     - qt6-main {{ version }}
 
 test:
-  requires:
-    - {{ cdt('mesa-libgl-devel') }}      # [linux]
-    - {{ cdt('mesa-libegl-devel') }}     # [linux]
-    - {{ cdt('mesa-dri-drivers') }}      # [linux]
-    - {{ cdt('libdrm-devel') }}          # [linux]
-    - {{ cdt('libglvnd-glx') }}          # [linux]
-    - {{ cdt('libglvnd-egl') }}          # [linux]
-    - cmake
-    - ninja
-  source_files:
-    - examples/
   commands:
     {% set qt_libs = ["NetworkAuth"] %}
     {% for each_qt_lib in qt_libs %}
