@@ -1,4 +1,4 @@
-{% set version = "6.7.2" %}
+{% set version = "6.7.3" %}
 
 package:
   name: qt6-networkauth
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://download.qt.io/official_releases/qt/{{ version.rpartition('.')[0] }}/{{ version }}/submodules/qtnetworkauth-everywhere-src-{{ version }}.tar.xz
-  sha256: 7f09824fcfe589eb32260c305ff9a126fe3bf93be218d372e8e9c10e212df470
+  sha256: 6b9a75a5e8829c56f4cfcdd146082882896b87eda380996f9cc34936504a13b7
 
 build:
-  number: 1
+  number: 0
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage('qt6-networkauth', max_pin='x.x') }}
