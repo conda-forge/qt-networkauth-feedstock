@@ -7,7 +7,6 @@ then
 fi
 
 cmake -LAH -G "Ninja" \
-  ${CMAKE_ARGS} \
   -DCMAKE_PREFIX_PATH=${PREFIX} \
   -DCMAKE_FIND_FRAMEWORK=LAST \
   -DCMAKE_INSTALL_RPATH:STRING=${PREFIX}/lib \
@@ -15,5 +14,5 @@ cmake -LAH -G "Ninja" \
   -DCMAKE_UNITY_BUILD_BATCH_SIZE=32 \
   -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
   -DQT_HOST_PATH=${PREFIX} \
-  -B build  .
+  -B build ${CMAKE_ARGS} .
 cmake --build build --target install
