@@ -202,6 +202,3 @@ Feedstock Maintainers
 * [@conda-forge/qt-main](https://github.com/orgs/conda-forge/teams/qt-main/)
 * [@hmaarrfk](https://github.com/hmaarrfk/)
 
-
-<!-- dummy commit to enable rerendering -->
-
