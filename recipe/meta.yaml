@@ -26,6 +26,9 @@ requirements:
 
   host:
     - qt6-main {{ version }}
+    - libgl-devel                        # [linux]
+    - libglx-devel                       # [linux]
+    - libegl-devel                       # [linux]
 
 test:
   commands:
