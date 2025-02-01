@@ -7,6 +7,7 @@ cmake -LAH -G "Ninja" ^
     -DCMAKE_UNITY_BUILD=ON ^
     -DCMAKE_UNITY_BUILD_BATCH_SIZE=32 ^
     -DCMAKE_MESSAGE_LOG_LEVEL=STATUS ^
+    -DQT_NO_MSVC_MIN_VERSION_CHECK=ON ^
     -B build .
 if errorlevel 1 exit 1
 
