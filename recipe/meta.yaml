@@ -49,7 +49,6 @@ about:
     - LICENSES/BSD-3-Clause.txt
     - LICENSES/GFDL-1.3-no-invariants-only.txt
     - LICENSES/LicenseRef-Qt-Commercial.txt
-    - LICENSES/Qt-GPL-exception-1.0.txt
   summary: Qt Network Authentication
   description: |
     Qt Network Authorization provides a set of APIs that enable Qt applications
