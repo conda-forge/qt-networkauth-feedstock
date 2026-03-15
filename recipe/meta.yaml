@@ -10,6 +10,8 @@ source:
 
 build:
   number: 0
+  # qt6-main isn't build for ppc64le
+  skip: true  # [ppc64le]
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage('qt6-networkauth', max_pin='x.x') }}
