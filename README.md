@@ -3,7 +3,7 @@ About qt-networkauth-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qt-networkauth-feedstock/blob/main/LICENSE.txt)
 
-Home: http://qt-project.org
+Home: http://qt-project.org/
 
 Package license: GPL-3.0-only
 
@@ -16,7 +16,6 @@ Documentation: http://doc.qt.io/
 Qt Network Authorization provides a set of APIs that enable Qt applications
 to obtain limited access to online accounts and HTTP services without
 exposing users' passwords.
-
 
 Current build status
 ====================
